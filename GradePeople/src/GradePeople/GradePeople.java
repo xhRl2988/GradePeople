@@ -11,6 +11,9 @@ class People{
 	private double avg; 	//평균
 	private int rank; 		//석차
 	
+//	void setName(String name) {		이 방법을 자주사용함 
+//		this.name=name;			
+//	}
 	void setName(String name) {this.name = name;}
 	void setKor(int kor) {this.kor = kor;}
 	void setEng(int eng) {this.eng = eng;}
@@ -27,12 +30,13 @@ class People{
 	}
 	double getAvg() {
 		return (double)this.getSum()/3;
+//		return this.getSum()/3.;   이 방법도 있음
 	}
 	int getRank() {
 		return rank;
 	}
 	void printScore() {
-		System.out.printf(" %3s %3d %3d %3d %3d %3.2f %3d \n",
+		System.out.printf(" %3s %3d %3d %3d %3d  %3.2f %3d \n",
 				this.getName(),this.getKor(),this.getEng(),this.getMath(),
 				this.getSum(),this.getAvg(),this.getRank() );
 	}
